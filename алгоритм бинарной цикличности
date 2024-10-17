@@ -1,0 +1,28 @@
+# Alghoritm Binary Cycling
+
+def sort_arr(ARRAY):
+	array_len = len(ARRAY) # len - 7
+	for x in range(array_len):
+		for y in range(0, array_len - x - 1):
+			if ARRAY[y] > ARRAY[y + 1]:
+				ARRAY[y], ARRAY[y + 1] = ARRAY[y + 1], ARRAY[y]
+						
+def split_array(ARRAY):
+	middle_index = len(ARRAY) // 2
+	return ARRAY[:middle_index], ARRAY[middle_index:]
+	
+def process_array(ARRAY):
+	first_half, second_half = split_array(ARRAY)
+	print('Обработка первой половины массива..')
+	for index, element in enumerate(first_half):
+		print(f'Index: {index}, Element: {element}')	
+	print('Обработка второй половины массива..')
+	for index, element in enumerate(second_half):
+		print(f'Index: {index} Element: {element}')
+	
+	
+array = [64, 34, 25, 12, 22, 11, 90]
+print(f'До сортировки: {array}')
+sort_arr(array)
+print(f'После сортировки: {array}')
+process_array(array)
