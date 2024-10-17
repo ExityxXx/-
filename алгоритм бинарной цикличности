@@ -15,7 +15,7 @@ def process_array(ARRAY):
 	first_half, second_half = split_array(ARRAY)
 	print('Обработка первой половины массива..')
 	for index, element in enumerate(first_half):
-		print(f'Index: {index}, Element: {element}')	
+		print(f'Index: {index}, Element: {element}')
 	print('Обработка второй половины массива..')
 	for index, element in enumerate(second_half):
 		print(f'Index: {index} Element: {element}')
